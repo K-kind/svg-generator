@@ -5,9 +5,9 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.ts'),
   output: {
     filename: 'index.js',
-    path: path.join(__dirname, 'lib')
+    path: path.join(__dirname, 'lib'),
+    libraryTarget: 'umd'
   },
-  target: 'node',
   resolve: {
     extensions: ['.ts'],
     alias: {
