@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Helper library for generating svg with typescript",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
