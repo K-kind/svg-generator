@@ -1,7 +1,7 @@
 {
-  "name": "library_template",
+  "name": "svg-generator",
   "version": "0.0.1",
-  "description": "template for making library with typescript",
+  "description": "Helper library for generating svg with typescript",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/K-kind/library_template.git"
+    "url": "git+https://github.com/K-kind/svg-generator.git"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
