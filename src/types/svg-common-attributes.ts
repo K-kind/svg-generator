@@ -1,4 +1,4 @@
-/** common attributes for SVGRectElement, SVGCircleElement, SVGEllipseElement, SVGLineElement, SVGPolylineElement, SVGPolygonElement */
+/** common attributes for SVGRectElement, SVGCircleElement, SVGEllipseElement, SVGLineElement, SVGPolylineElement and SVGPolygonElement */
 export type CommonShapeAttributes = CoreAttributes &
   ConditionalProcessingAttributes &
   GraphicalEventAttributes &
