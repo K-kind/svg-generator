@@ -1,21 +1,18 @@
 import {
-  CommonShapeAttributes,
-  CommonSvgAttributes
-} from './svg-common-attributes'
+  CoreAttributes,
+  ConditionalProcessingAttributes,
+  GraphicalEventAttributes,
+  PresentationAttributes,
+  CommonStyleAttributes,
+  TransformAttributes
+} from './common'
 
-export type SvgAttributes = CommonSvgAttributes & {
-  x?: string
-  y?: string
-  width?: string
-  height?: string
-  viewBox?: string
-  preserveAspectRatio?: string
-  zoomAndPan?: string
-  version?: string
-  baseProfile?: string
-  contentScriptType?: string
-  contentStyleType?: string
-}
+type CommonShapeAttributes = CoreAttributes &
+  ConditionalProcessingAttributes &
+  GraphicalEventAttributes &
+  PresentationAttributes &
+  CommonStyleAttributes &
+  TransformAttributes
 
 export type RectAttributes = CommonShapeAttributes & {
   x?: string
@@ -52,4 +49,9 @@ export type PolylineAttributes = CommonShapeAttributes & {
 
 export type PolygonAttributes = CommonShapeAttributes & {
   points?: string
+}
+
+export type PathAttributes = CommonShapeAttributes & {
+  d?: string
+  pathLength?: string
 }

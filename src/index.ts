@@ -8,12 +8,14 @@ export {
   generatePolygon
 } from './lib/draw-svg'
 
+export { SvgAttributes } from './types/attributes/svg'
+
 export {
-  SvgAttributes,
   RectAttributes,
   CircleAttributes,
   EllipseAttributes,
   LineAttributes,
   PolylineAttributes,
-  PolygonAttributes
-} from './types/svg-shape-attributes'
+  PolygonAttributes,
+  PathAttributes
+} from './types/attributes/shapes'

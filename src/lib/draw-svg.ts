@@ -1,13 +1,16 @@
 import { SVGXMLNS } from '../constants/XMLNSs'
+
+import { SvgAttributes } from '../types/attributes/svg'
+
 import {
+  RectAttributes,
   CircleAttributes,
   EllipseAttributes,
   LineAttributes,
-  PolygonAttributes,
   PolylineAttributes,
-  RectAttributes,
-  SvgAttributes
-} from '../types/svg-shape-attributes'
+  PolygonAttributes,
+  PathAttributes
+} from '../types/attributes/shapes'
 
 export const setAttributes = (
   element: SVGElement,
@@ -60,4 +63,10 @@ export const generatePolygon = (attrs: PolygonAttributes) => {
   const polygon = document.createElementNS(SVGXMLNS, 'polygon')
   setAttributes(polygon, attrs)
   return polygon
+}
+
+export const generatePath = (attrs: PathAttributes) => {
+  const path = document.createElementNS(SVGXMLNS, 'path')
+  setAttributes(path, attrs)
+  return path
 }

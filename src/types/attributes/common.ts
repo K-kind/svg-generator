@@ -1,33 +1,17 @@
-/** common attributes for SVGRectElement, SVGCircleElement, SVGEllipseElement, SVGLineElement, SVGPolylineElement and SVGPolygonElement */
-export type CommonShapeAttributes = CoreAttributes &
-  ConditionalProcessingAttributes &
-  GraphicalEventAttributes &
-  PresentationAttributes &
-  CommonStyleAttributes &
-  TransformAttributes
-
-/** common attributes for SVGSVGElement */
-export type CommonSvgAttributes = CoreAttributes &
-  ConditionalProcessingAttributes &
-  GraphicalEventAttributes &
-  PresentationAttributes &
-  CommonStyleAttributes &
-  DocumentEventAttributes
-
-type CoreAttributes = {
+export type CoreAttributes = {
   id?: string
   'xml:base'?: string
   'xml:lang'?: string
   'xml:space'?: string
 }
 
-type ConditionalProcessingAttributes = {
+export type ConditionalProcessingAttributes = {
   requiredFeatures?: string
   requiredExtensions?: string
   systemLanguage?: string
 }
 
-type GraphicalEventAttributes = {
+export type GraphicalEventAttributes = {
   onactivate?: string
   onclick?: string
   onfocusin?: string
@@ -40,7 +24,7 @@ type GraphicalEventAttributes = {
   onmouseup?: string
 }
 
-type PresentationAttributes = {
+export type PresentationAttributes = {
   'alignment-baseline'?: string
   'baseline-shift'?: string
   clip?: string
@@ -102,17 +86,17 @@ type PresentationAttributes = {
   'writing-mode,'?: string
 }
 
-type CommonStyleAttributes = {
+export type CommonStyleAttributes = {
   class?: string
   style?: string
   externalResourcesRequired?: string
 }
 
-type TransformAttributes = {
+export type TransformAttributes = {
   transform?: string
 }
 
-type DocumentEventAttributes = {
+export type DocumentEventAttributes = {
   onunload?: string
   onabort?: string
   onerror?: string
