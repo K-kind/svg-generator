@@ -89,6 +89,9 @@ export type PresentationAttributes = {
 export type CommonStyleAttributes = {
   class?: string
   style?: string
+}
+
+export type ExternalResourceAttributes = {
   externalResourcesRequired?: string
 }
 
@@ -103,4 +106,53 @@ export type DocumentEventAttributes = {
   onresize?: string
   onscroll?: string
   onzoom?: string
+}
+
+export type XLinkAttributes = {
+  'xlink:href'?: string
+  'xlink:show'?: string
+  'xlink:actuate'?: string
+  'xlink:type'?: string
+  'xlink:role'?: string
+  'xlink:arcrole'?: string
+  'xlink:title'?: string
+}
+
+export type AnimationEventAttributes = {
+  onbegin?: string
+  onend?: string
+  onrepeat?: string
+  onload?: string
+}
+
+export type AnimationTargetAttributes = {
+  attributeType?: string
+  attributeName?: string
+}
+
+export type AnimationTimingAttributes = {
+  begin?: string
+  dur?: string
+  end?: string
+  min?: string
+  max?: string
+  restart?: string
+  repeatCount?: string
+  repeatDur?: string
+  fill?: string
+}
+
+export type AnimationValueAttributes = {
+  calcMode?: string
+  values?: string
+  keyTimes?: string
+  keySplines?: string
+  from?: string
+  to?: string
+  by?: string
+}
+
+export type AnimationAdditionAttributes = {
+  additive?: string
+  accumulate?: string
 }
