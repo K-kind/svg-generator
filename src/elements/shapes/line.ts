@@ -44,7 +44,7 @@ type ChildElement =
   | SVGSet
 
 class Line extends Base<'line', LineAttributes> {
-  constructor(attrs: LineAttributes) {
+  constructor(attrs?: LineAttributes) {
     super('line', attrs)
   }
 

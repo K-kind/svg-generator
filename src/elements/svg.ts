@@ -82,7 +82,7 @@ type ChildElement =
   | RadialGradient
 
 class SVG extends Base<'svg', SVGAttributes> {
-  constructor(attrs: SVGAttributes) {
+  constructor(attrs?: SVGAttributes) {
     super('svg', attrs)
   }
 

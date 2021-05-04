@@ -10,7 +10,7 @@ type FontFaceSrcAttributes = CoreAttributes
 type ChildElement = FontFaceName | FontFaceUri
 
 class FontFaceSrc extends Base<'fontFaceSrc', FontFaceSrcAttributes> {
-  constructor(attrs: FontFaceSrcAttributes) {
+  constructor(attrs?: FontFaceSrcAttributes) {
     super('fontFaceSrc', attrs)
   }
 

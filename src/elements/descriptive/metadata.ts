@@ -4,7 +4,7 @@ import { CoreAttributes } from '../../types/common-attributes'
 type MetadataAttributes = CoreAttributes
 
 class Metadata extends Base<'metadata', MetadataAttributes> {
-  constructor(attrs: MetadataAttributes) {
+  constructor(attrs?: MetadataAttributes) {
     super('metadata', attrs)
   }
 }

@@ -101,7 +101,7 @@ type ChildElement =
   | View
 
 class Marker extends Base<'marker', MarkerAttributes> {
-  constructor(attrs: MarkerAttributes) {
+  constructor(attrs?: MarkerAttributes) {
     super('marker', attrs)
   }
 

@@ -52,7 +52,7 @@ type ChildElement =
 
 class Rect extends Base<'rect', RectAttributes> {
   protected name = 'rect'
-  constructor(attrs: RectAttributes) {
+  constructor(attrs?: RectAttributes) {
     super('rect', attrs)
   }
 

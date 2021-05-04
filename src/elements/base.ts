@@ -23,9 +23,11 @@ abstract class Base<K extends SVGElementTagName, A extends Attrs> {
   public static SVGXMLNS = 'http://www.w3.org/2000/svg'
   public element: AllSVGElementTagNameMap[K]
 
-  constructor(name: K, attrs: A) {
+  constructor(name: K, attrs?: A) {
     this.element = this.createElement(name)
-    this.setAttributes(attrs)
+    if (attrs) {
+      this.setAttributes(attrs)
+    }
   }
 
   private createElement(name: K) {

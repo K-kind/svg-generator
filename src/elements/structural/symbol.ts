@@ -97,7 +97,7 @@ type ChildElement =
   | View
 
 class SVGSymbol extends Base<'symbol', SVGSymbolAttributes> {
-  constructor(attrs: SVGSymbolAttributes) {
+  constructor(attrs?: SVGSymbolAttributes) {
     super('symbol', attrs)
   }
 

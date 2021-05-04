@@ -76,7 +76,7 @@ type ChildElement =
   | Switch
 
 class Switch extends Base<'switch', SwitchAttributes> {
-  constructor(attrs: SwitchAttributes) {
+  constructor(attrs?: SwitchAttributes) {
     super('switch', attrs)
   }
 

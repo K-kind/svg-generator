@@ -101,7 +101,7 @@ type ChildElement =
   | View
 
 class Mask extends Base<'mask', MaskAttributes> {
-  constructor(attrs: MaskAttributes) {
+  constructor(attrs?: MaskAttributes) {
     super('mask', attrs)
   }
 

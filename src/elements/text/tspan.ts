@@ -50,7 +50,7 @@ type ChildElement =
   | Tspan
 
 class Tspan extends Base<'tspan', TspanAttributes> {
-  constructor(attrs: TspanAttributes) {
+  constructor(attrs?: TspanAttributes) {
     super('tspan', attrs)
   }
 

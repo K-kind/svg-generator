@@ -102,7 +102,7 @@ type ChildElement =
   | View
 
 class A extends Base<'a', AAttributes> {
-  constructor(attrs: AAttributes) {
+  constructor(attrs?: AAttributes) {
     super('a', attrs)
   }
 

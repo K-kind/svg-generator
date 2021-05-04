@@ -23,7 +23,7 @@ type ForeignObjectAttributes = CoreAttributes &
     height?: string
   }
 class ForeignObject extends Base<'foreignObject', ForeignObjectAttributes> {
-  constructor(attrs: ForeignObjectAttributes) {
+  constructor(attrs?: ForeignObjectAttributes) {
     super('foreignObject', attrs)
   }
 }

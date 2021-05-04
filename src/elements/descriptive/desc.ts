@@ -10,7 +10,7 @@ type DescAttributes = CoreAttributes &
   ExternalResourceAttributes
 
 class Desc extends Base<'desc', DescAttributes> {
-  constructor(attrs: DescAttributes) {
+  constructor(attrs?: DescAttributes) {
     super('desc', attrs)
   }
 }

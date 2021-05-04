@@ -20,7 +20,7 @@ type ViewAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class View extends Base<'view', ViewAttributes> {
-  constructor(attrs: ViewAttributes) {
+  constructor(attrs?: ViewAttributes) {
     super('view', attrs)
   }
 

@@ -29,7 +29,7 @@ type AnimateAttributes = ConditionalProcessingAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class Animate extends Base<'animate', AnimateAttributes> {
-  constructor(attrs: AnimateAttributes) {
+  constructor(attrs?: AnimateAttributes) {
     super('animate', attrs)
   }
 

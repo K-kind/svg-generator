@@ -59,7 +59,7 @@ type ChildElement =
   | Tspan
 
 class SVGText extends Base<'text', SVGTextAttributes> {
-  constructor(attrs: SVGTextAttributes) {
+  constructor(attrs?: SVGTextAttributes) {
     super('text', attrs)
   }
 

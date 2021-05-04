@@ -44,7 +44,7 @@ type ChildElement =
   | SVGSet
 
 class Ellipse extends Base<'ellipse', EllipseAttributes> {
-  constructor(attrs: EllipseAttributes) {
+  constructor(attrs?: EllipseAttributes) {
     super('ellipse', attrs)
   }
 

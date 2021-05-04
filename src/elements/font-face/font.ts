@@ -28,7 +28,7 @@ type FontAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title | FontFace
 
 class Font extends Base<'font', FontAttributes> {
-  constructor(attrs: FontAttributes) {
+  constructor(attrs?: FontAttributes) {
     super('font', attrs)
   }
 

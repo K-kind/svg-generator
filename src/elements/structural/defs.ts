@@ -98,7 +98,7 @@ type ChildElement =
   | View
 
 class Defs extends Base<'defs', DefsAttributes> {
-  constructor(attrs: DefsAttributes) {
+  constructor(attrs?: DefsAttributes) {
     super('defs', attrs)
   }
 

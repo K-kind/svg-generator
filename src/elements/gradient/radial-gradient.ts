@@ -42,7 +42,7 @@ type ChildElement =
   | Stop
 
 class RadialGradient extends Base<'radialGradient', RadialGradientAttributes> {
-  constructor(attrs: RadialGradientAttributes) {
+  constructor(attrs?: RadialGradientAttributes) {
     super('radialGradient', attrs)
   }
 

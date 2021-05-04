@@ -106,7 +106,7 @@ type ChildElement =
   | View
 
 class Pattern extends Base<'pattern', PatternAttributes> {
-  constructor(attrs: PatternAttributes) {
+  constructor(attrs?: PatternAttributes) {
     super('pattern', attrs)
   }
 

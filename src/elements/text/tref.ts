@@ -29,7 +29,7 @@ type TrefAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title | Animate | AnimateColor | SVGSet
 
 class Tref extends Base<'tref', TrefAttributes> {
-  constructor(attrs: TrefAttributes) {
+  constructor(attrs?: TrefAttributes) {
     super('tref', attrs)
   }
 

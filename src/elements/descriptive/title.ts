@@ -10,7 +10,7 @@ type TitleAttributes = CoreAttributes &
   ExternalResourceAttributes
 
 class Title extends Base<'title', TitleAttributes> {
-  constructor(attrs: TitleAttributes) {
+  constructor(attrs?: TitleAttributes) {
     super('title', attrs)
   }
 }

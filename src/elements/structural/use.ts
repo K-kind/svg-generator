@@ -75,7 +75,7 @@ type ChildElement =
   | View
 
 class Use extends Base<'use', UseAttributes> {
-  constructor(attrs: UseAttributes) {
+  constructor(attrs?: UseAttributes) {
     super('use', attrs)
   }
 

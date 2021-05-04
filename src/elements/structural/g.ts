@@ -98,7 +98,7 @@ type ChildElement =
   | View
 
 class G extends Base<'g', GAttributes> {
-  constructor(attrs: GAttributes) {
+  constructor(attrs?: GAttributes) {
     super('g', attrs)
   }
 

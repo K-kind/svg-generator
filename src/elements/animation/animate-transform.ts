@@ -34,7 +34,7 @@ class AnimateTransform extends Base<
   'animateTransform',
   AnimateTransformAttributes
 > {
-  constructor(attrs: AnimateTransformAttributes) {
+  constructor(attrs?: AnimateTransformAttributes) {
     super('animateTransform', attrs)
   }
 

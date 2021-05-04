@@ -9,7 +9,7 @@ type FontFaceUriAttributes = CoreAttributes & XLinkAttributes
 type ChildElement = FontFaceFormat
 
 class FontFaceUri extends Base<'fontFaceUri', FontFaceUriAttributes> {
-  constructor(attrs: FontFaceUriAttributes) {
+  constructor(attrs?: FontFaceUriAttributes) {
     super('fontFaceUri', attrs)
   }
 
