@@ -1,6 +1,6 @@
 {
   "name": "@k-kind/svg-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Helper library for generating svg with typescript",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
