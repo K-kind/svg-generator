@@ -75,13 +75,9 @@ type ChildElement =
   | SVGText
   | Switch
 
-class Switch extends Base<'switch'> {
-  constructor() {
-    super('switch')
-  }
-
-  public setAttributes(attrs: SwitchAttributes) {
-    super.setAttributes(attrs)
+class Switch extends Base<'switch', SwitchAttributes> {
+  constructor(attrs: SwitchAttributes) {
+    super('switch', attrs)
   }
 
   public append(child: ChildElement) {

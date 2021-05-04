@@ -19,13 +19,9 @@ type MPathAttributes = CoreAttributes &
 
 type ChildElement = Desc | Metadata | Title
 
-class MPath extends Base<'mpath'> {
-  constructor() {
-    super('mpath')
-  }
-
-  public setAttributes(attrs: MPathAttributes) {
-    super.setAttributes(attrs)
+class MPath extends Base<'mpath', MPathAttributes> {
+  constructor(attrs: MPathAttributes) {
+    super('mpath', attrs)
   }
 
   public append(child: ChildElement) {

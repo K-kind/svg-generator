@@ -28,13 +28,9 @@ type TrefAttributes = CoreAttributes &
 
 type ChildElement = Desc | Metadata | Title | Animate | AnimateColor | SVGSet
 
-class Tref extends Base<'tref'> {
-  constructor() {
-    super('tref')
-  }
-
-  public setAttributes(attrs: TrefAttributes) {
-    super.setAttributes(attrs)
+class Tref extends Base<'tref', TrefAttributes> {
+  constructor(attrs: TrefAttributes) {
+    super('tref', attrs)
   }
 
   public append(child: ChildElement) {

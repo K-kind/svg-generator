@@ -9,13 +9,9 @@ type DescAttributes = CoreAttributes &
   CommonStyleAttributes &
   ExternalResourceAttributes
 
-class Desc extends Base<'desc'> {
-  constructor() {
-    super('desc')
-  }
-
-  public setAttributes(attrs: DescAttributes) {
-    super.setAttributes(attrs)
+class Desc extends Base<'desc', DescAttributes> {
+  constructor(attrs: DescAttributes) {
+    super('desc', attrs)
   }
 }
 

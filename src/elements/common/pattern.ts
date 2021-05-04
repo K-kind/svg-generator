@@ -105,13 +105,9 @@ type ChildElement =
   | Switch
   | View
 
-class Pattern extends Base<'pattern'> {
-  constructor() {
-    super('pattern')
-  }
-
-  public setAttributes(attrs: PatternAttributes) {
-    super.setAttributes(attrs)
+class Pattern extends Base<'pattern', PatternAttributes> {
+  constructor(attrs: PatternAttributes) {
+    super('pattern', attrs)
   }
 
   public append(child: ChildElement) {

@@ -101,13 +101,9 @@ type ChildElement =
   | Switch
   | View
 
-class A extends Base<'a'> {
-  constructor() {
-    super('a')
-  }
-
-  public setAttributes(attrs: AAttributes) {
-    super.setAttributes(attrs)
+class A extends Base<'a', AAttributes> {
+  constructor(attrs: AAttributes) {
+    super('a', attrs)
   }
 
   public append(child: ChildElement) {

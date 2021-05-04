@@ -41,13 +41,9 @@ type ChildElement =
   | SVGSet
   | Stop
 
-class RadialGradient extends Base<'radialGradient'> {
-  constructor() {
-    super('radialGradient')
-  }
-
-  public setAttributes(attrs: RadialGradientAttributes) {
-    super.setAttributes(attrs)
+class RadialGradient extends Base<'radialGradient', RadialGradientAttributes> {
+  constructor(attrs: RadialGradientAttributes) {
+    super('radialGradient', attrs)
   }
 
   public append(child: ChildElement) {

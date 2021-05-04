@@ -7,13 +7,9 @@ type SVGStyleAttributes = CoreAttributes & {
   title?: string
 }
 
-class SVGStyle extends Base<'style'> {
-  constructor() {
-    super('style')
-  }
-
-  public setAttributes(attrs: SVGStyleAttributes) {
-    super.setAttributes(attrs)
+class SVGStyle extends Base<'style', SVGStyleAttributes> {
+  constructor(attrs: SVGStyleAttributes) {
+    super('style', attrs)
   }
 }
 

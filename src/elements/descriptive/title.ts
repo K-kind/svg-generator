@@ -9,13 +9,9 @@ type TitleAttributes = CoreAttributes &
   CommonStyleAttributes &
   ExternalResourceAttributes
 
-class Title extends Base<'title'> {
-  constructor() {
-    super('title')
-  }
-
-  public setAttributes(attrs: TitleAttributes) {
-    super.setAttributes(attrs)
+class Title extends Base<'title', TitleAttributes> {
+  constructor(attrs: TitleAttributes) {
+    super('title', attrs)
   }
 }
 

@@ -19,13 +19,9 @@ type ViewAttributes = CoreAttributes &
 
 type ChildElement = Desc | Metadata | Title
 
-class View extends Base<'view'> {
-  constructor() {
-    super('view')
-  }
-
-  public setAttributes(attrs: ViewAttributes) {
-    super.setAttributes(attrs)
+class View extends Base<'view', ViewAttributes> {
+  constructor(attrs: ViewAttributes) {
+    super('view', attrs)
   }
 
   public append(child: ChildElement) {

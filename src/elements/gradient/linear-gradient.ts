@@ -40,13 +40,9 @@ type ChildElement =
   | SVGSet
   | Stop
 
-class LinearGradient extends Base<'linearGradient'> {
-  constructor() {
-    super('linearGradient')
-  }
-
-  public setAttributes(attrs: LinearGradientAttributes) {
-    super.setAttributes(attrs)
+class LinearGradient extends Base<'linearGradient', LinearGradientAttributes> {
+  constructor(attrs: LinearGradientAttributes) {
+    super('linearGradient', attrs)
   }
 
   public append(child: ChildElement) {

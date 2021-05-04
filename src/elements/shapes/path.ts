@@ -40,14 +40,9 @@ type ChildElement =
   | AnimateMotion
   | AnimateTransform
   | SVGSet
-
-class Path extends Base<'path'> {
-  constructor() {
-    super('path')
-  }
-
-  public setAttributes(attrs: PathAttributes) {
-    super.setAttributes(attrs)
+class Path extends Base<'path', PathAttributes> {
+  constructor(attrs: PathAttributes) {
+    super('path', attrs)
   }
 
   public append(child: ChildElement) {

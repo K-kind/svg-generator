@@ -37,7 +37,7 @@ import {
   DocumentEventAttributes
 } from '../types/common-attributes'
 
-type SvgAttributes = CoreAttributes &
+type SVGAttributes = CoreAttributes &
   ConditionalProcessingAttributes &
   GraphicalEventAttributes &
   PresentationAttributes &
@@ -81,13 +81,9 @@ type ChildElement =
   | LinearGradient
   | RadialGradient
 
-class SVG extends Base<'svg'> {
-  constructor() {
-    super('svg')
-  }
-
-  public setAttributes(attrs: SvgAttributes) {
-    super.setAttributes(attrs)
+class SVG extends Base<'svg', SVGAttributes> {
+  constructor(attrs: SVGAttributes) {
+    super('svg', attrs)
   }
 
   public append(child: ChildElement) {
@@ -95,4 +91,4 @@ class SVG extends Base<'svg'> {
   }
 }
 
-export { SVG, SvgAttributes }
+export { SVG, SVGAttributes }

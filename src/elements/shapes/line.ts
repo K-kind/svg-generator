@@ -43,13 +43,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Line extends Base<'line'> {
-  constructor() {
-    super('line')
-  }
-
-  public setAttributes(attrs: LineAttributes) {
-    super.setAttributes(attrs)
+class Line extends Base<'line', LineAttributes> {
+  constructor(attrs: LineAttributes) {
+    super('line', attrs)
   }
 
   public append(child: ChildElement) {

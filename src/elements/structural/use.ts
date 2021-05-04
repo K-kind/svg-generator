@@ -74,13 +74,9 @@ type ChildElement =
   | Switch
   | View
 
-class Use extends Base<'use'> {
-  constructor() {
-    super('use')
-  }
-
-  public setAttributes(attrs: UseAttributes) {
-    super.setAttributes(attrs)
+class Use extends Base<'use', UseAttributes> {
+  constructor(attrs: UseAttributes) {
+    super('use', attrs)
   }
 
   public append(child: ChildElement) {

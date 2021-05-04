@@ -1,4 +1,4 @@
-export { SVG, SvgAttributes } from './elements/svg'
+export { SVG, SVGAttributes } from './elements/svg'
 export { Animate, AnimateAttributes } from './elements/animation/animate'
 export { AnimateColor, AnimateColorAttributes } from './elements/animation/animate-color'
 export { AnimateMotion, AnimateMotionAttributes } from './elements/animation/animate-motion'

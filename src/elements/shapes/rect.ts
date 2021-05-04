@@ -50,13 +50,10 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Rect extends Base<'rect'> {
-  constructor() {
-    super('rect')
-  }
-
-  public setAttributes(attrs: RectAttributes) {
-    super.setAttributes(attrs)
+class Rect extends Base<'rect', RectAttributes> {
+  protected name = 'rect'
+  constructor(attrs: RectAttributes) {
+    super('rect', attrs)
   }
 
   public append(child: ChildElement) {

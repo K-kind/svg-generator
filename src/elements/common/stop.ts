@@ -18,13 +18,9 @@ type StopAttributes = CoreAttributes &
 
 type ChildElement = Animate | AnimateColor | SVGSet
 
-class Stop extends Base<'stop'> {
-  constructor() {
-    super('stop')
-  }
-
-  public setAttributes(attrs: StopAttributes) {
-    super.setAttributes(attrs)
+class Stop extends Base<'stop', StopAttributes> {
+  constructor(attrs: StopAttributes) {
+    super('stop', attrs)
   }
 
   public append(child: ChildElement) {

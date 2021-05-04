@@ -46,13 +46,9 @@ type FontFaceAttributes = CoreAttributes & {
 
 type ChildElement = Desc | Metadata | Title | FontFaceSrc
 
-class FontFace extends Base<'fontFace'> {
-  constructor() {
-    super('fontFace')
-  }
-
-  public setAttributes(attrs: FontFaceAttributes) {
-    super.setAttributes(attrs)
+class FontFace extends Base<'fontFace', FontFaceAttributes> {
+  constructor(attrs: FontFaceAttributes) {
+    super('fontFace', attrs)
   }
 
   public append(child: ChildElement) {

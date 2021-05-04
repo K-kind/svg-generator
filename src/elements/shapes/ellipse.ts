@@ -43,13 +43,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Ellipse extends Base<'ellipse'> {
-  constructor() {
-    super('ellipse')
-  }
-
-  public setAttributes(attrs: EllipseAttributes) {
-    super.setAttributes(attrs)
+class Ellipse extends Base<'ellipse', EllipseAttributes> {
+  constructor(attrs: EllipseAttributes) {
+    super('ellipse', attrs)
   }
 
   public append(child: ChildElement) {

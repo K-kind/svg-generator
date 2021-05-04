@@ -58,13 +58,9 @@ type ChildElement =
   | Tref
   | Tspan
 
-class SVGText extends Base<'text'> {
-  constructor() {
-    super('text')
-  }
-
-  public setAttributes(attrs: SVGTextAttributes) {
-    super.setAttributes(attrs)
+class SVGText extends Base<'text', SVGTextAttributes> {
+  constructor(attrs: SVGTextAttributes) {
+    super('text', attrs)
   }
 
   public append(child: ChildElement) {

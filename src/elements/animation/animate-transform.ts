@@ -30,13 +30,12 @@ type AnimateTransformAttributes = ConditionalProcessingAttributes &
 
 type ChildElement = Desc | Metadata | Title
 
-class AnimateTransform extends Base<'animateTransform'> {
-  constructor() {
-    super('animateTransform')
-  }
-
-  public setAttributes(attrs: AnimateTransformAttributes) {
-    super.setAttributes(attrs)
+class AnimateTransform extends Base<
+  'animateTransform',
+  AnimateTransformAttributes
+> {
+  constructor(attrs: AnimateTransformAttributes) {
+    super('animateTransform', attrs)
   }
 
   public append(child: ChildElement) {

@@ -40,13 +40,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Polyline extends Base<'polyline'> {
-  constructor() {
-    super('polyline')
-  }
-
-  public setAttributes(attrs: PolylineAttributes) {
-    super.setAttributes(attrs)
+class Polyline extends Base<'polyline', PolylineAttributes> {
+  constructor(attrs: PolylineAttributes) {
+    super('polyline', attrs)
   }
 
   public append(child: ChildElement) {

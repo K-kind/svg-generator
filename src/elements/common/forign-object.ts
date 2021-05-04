@@ -22,14 +22,9 @@ type ForeignObjectAttributes = CoreAttributes &
     width?: string
     height?: string
   }
-
-class ForeignObject extends Base<'foreignObject'> {
-  constructor() {
-    super('foreignObject')
-  }
-
-  public setAttributes(attrs: ForeignObjectAttributes) {
-    super.setAttributes(attrs)
+class ForeignObject extends Base<'foreignObject', ForeignObjectAttributes> {
+  constructor(attrs: ForeignObjectAttributes) {
+    super('foreignObject', attrs)
   }
 }
 

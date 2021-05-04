@@ -17,12 +17,15 @@ type AllSVGElementTagNameMap = SVGElementTagNameMap & {
 
 type SVGElementTagName = keyof AllSVGElementTagNameMap
 
-abstract class Base<K extends SVGElementTagName> {
+type Attrs = { [key: string]: string | undefined }
+
+abstract class Base<K extends SVGElementTagName, A extends Attrs> {
   public static SVGXMLNS = 'http://www.w3.org/2000/svg'
   public element: AllSVGElementTagNameMap[K]
 
-  constructor(name: K) {
+  constructor(name: K, attrs: A) {
     this.element = this.createElement(name)
+    this.setAttributes(attrs)
   }
 
   private createElement(name: K) {
@@ -32,9 +35,7 @@ abstract class Base<K extends SVGElementTagName> {
     ) as AllSVGElementTagNameMap[K]
   }
 
-  public setAttributes<A extends { [key: string]: string | undefined }>(
-    attrs: A
-  ) {
+  public setAttributes(attrs: A) {
     for (const [key, value] of Object.entries(attrs)) {
       if (value != undefined) {
         this.element.setAttribute(key, value)
@@ -44,7 +45,7 @@ abstract class Base<K extends SVGElementTagName> {
     }
   }
 
-  protected appendSVG<V extends Base<SVGElementTagName>>(child: V) {
+  protected appendSVG<V extends Base<SVGElementTagName, Attrs>>(child: V) {
     this.element.appendChild(child.element)
   }
 }

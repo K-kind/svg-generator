@@ -100,13 +100,9 @@ type ChildElement =
   | Switch
   | View
 
-class Mask extends Base<'mask'> {
-  constructor() {
-    super('mask')
-  }
-
-  public setAttributes(attrs: MaskAttributes) {
-    super.setAttributes(attrs)
+class Mask extends Base<'mask', MaskAttributes> {
+  constructor(attrs: MaskAttributes) {
+    super('mask', attrs)
   }
 
   public append(child: ChildElement) {

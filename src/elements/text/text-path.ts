@@ -46,13 +46,9 @@ type ChildElement =
   | Tref
   | Tspan
 
-class TextPath extends Base<'textPath'> {
-  constructor() {
-    super('textPath')
-  }
-
-  public setAttributes(attrs: TextPathAttributes) {
-    super.setAttributes(attrs)
+class TextPath extends Base<'textPath', TextPathAttributes> {
+  constructor(attrs: TextPathAttributes) {
+    super('textPath', attrs)
   }
 
   public append(child: ChildElement) {

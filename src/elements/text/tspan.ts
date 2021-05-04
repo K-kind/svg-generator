@@ -49,13 +49,9 @@ type ChildElement =
   | Tref
   | Tspan
 
-class Tspan extends Base<'tspan'> {
-  constructor() {
-    super('tspan')
-  }
-
-  public setAttributes(attrs: TspanAttributes) {
-    super.setAttributes(attrs)
+class Tspan extends Base<'tspan', TspanAttributes> {
+  constructor(attrs: TspanAttributes) {
+    super('tspan', attrs)
   }
 
   public append(child: ChildElement) {

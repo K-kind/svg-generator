@@ -42,13 +42,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Circle extends Base<'circle'> {
-  constructor() {
-    super('circle')
-  }
-
-  public setAttributes(attrs: CircleAttributes) {
-    super.setAttributes(attrs)
+class Circle extends Base<'circle', CircleAttributes> {
+  constructor(attrs: CircleAttributes) {
+    super('circle', attrs)
   }
 
   public append(child: ChildElement) {

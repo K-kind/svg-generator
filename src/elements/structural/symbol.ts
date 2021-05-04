@@ -96,13 +96,9 @@ type ChildElement =
   | Switch
   | View
 
-class SVGSymbol extends Base<'symbol'> {
-  constructor() {
-    super('symbol')
-  }
-
-  public setAttributes(attrs: SVGSymbolAttributes) {
-    super.setAttributes(attrs)
+class SVGSymbol extends Base<'symbol', SVGSymbolAttributes> {
+  constructor(attrs: SVGSymbolAttributes) {
+    super('symbol', attrs)
   }
 
   public append(child: ChildElement) {

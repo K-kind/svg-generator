@@ -25,14 +25,9 @@ type AltGlyphAttributes = CoreAttributes &
     format?: string
     rotate?: string
   }
-
-class AltGlyph extends Base<'altGlyph'> {
-  constructor() {
-    super('altGlyph')
-  }
-
-  public setAttributes(attrs: AltGlyphAttributes) {
-    super.setAttributes(attrs)
+class AltGlyph extends Base<'altGlyph', AltGlyphAttributes> {
+  constructor(attrs: AltGlyphAttributes) {
+    super('altGlyph', attrs)
   }
 }
 

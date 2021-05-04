@@ -46,13 +46,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class SVGImage extends Base<'image'> {
-  constructor() {
-    super('image')
-  }
-
-  public setAttributes(attrs: SVGImageAttributes) {
-    super.setAttributes(attrs)
+class SVGImage extends Base<'image', SVGImageAttributes> {
+  constructor(attrs: SVGImageAttributes) {
+    super('image', attrs)
   }
 
   public append(child: ChildElement) {

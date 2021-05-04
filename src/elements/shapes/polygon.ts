@@ -40,13 +40,9 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 
-class Polygon extends Base<'polygon'> {
-  constructor() {
-    super('polygon')
-  }
-
-  public setAttributes(attrs: PolygonAttributes) {
-    super.setAttributes(attrs)
+class Polygon extends Base<'polygon', PolygonAttributes> {
+  constructor(attrs: PolygonAttributes) {
+    super('polygon', attrs)
   }
 
   public append(child: ChildElement) {

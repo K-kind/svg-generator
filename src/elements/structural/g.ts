@@ -97,13 +97,9 @@ type ChildElement =
   | Switch
   | View
 
-class G extends Base<'g'> {
-  constructor() {
-    super('g')
-  }
-
-  public setAttributes(attrs: GAttributes) {
-    super.setAttributes(attrs)
+class G extends Base<'g', GAttributes> {
+  constructor(attrs: GAttributes) {
+    super('g', attrs)
   }
 
   public append(child: ChildElement) {

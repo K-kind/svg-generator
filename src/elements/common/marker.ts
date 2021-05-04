@@ -100,13 +100,9 @@ type ChildElement =
   | Switch
   | View
 
-class Marker extends Base<'marker'> {
-  constructor() {
-    super('marker')
-  }
-
-  public setAttributes(attrs: MarkerAttributes) {
-    super.setAttributes(attrs)
+class Marker extends Base<'marker', MarkerAttributes> {
+  constructor(attrs: MarkerAttributes) {
+    super('marker', attrs)
   }
 
   public append(child: ChildElement) {

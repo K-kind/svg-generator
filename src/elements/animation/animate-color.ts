@@ -28,13 +28,9 @@ type AnimateColorAttributes = ConditionalProcessingAttributes &
 
 type ChildElement = Desc | Metadata | Title
 
-class AnimateColor extends Base<'animateColor'> {
-  constructor() {
-    super('animateColor')
-  }
-
-  public setAttributes(attrs: AnimateColorAttributes) {
-    super.setAttributes(attrs)
+class AnimateColor extends Base<'animateColor', AnimateColorAttributes> {
+  constructor(attrs: AnimateColorAttributes) {
+    super('animateColor', attrs)
   }
 
   public append(child: ChildElement) {

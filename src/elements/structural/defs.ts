@@ -97,13 +97,9 @@ type ChildElement =
   | Switch
   | View
 
-class Defs extends Base<'defs'> {
-  constructor() {
-    super('defs')
-  }
-
-  public setAttributes(attrs: DefsAttributes) {
-    super.setAttributes(attrs)
+class Defs extends Base<'defs', DefsAttributes> {
+  constructor(attrs: DefsAttributes) {
+    super('defs', attrs)
   }
 
   public append(child: ChildElement) {

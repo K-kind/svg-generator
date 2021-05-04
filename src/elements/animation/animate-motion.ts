@@ -30,13 +30,9 @@ type AnimateMotionAttributes = ConditionalProcessingAttributes &
 
 type ChildElement = Desc | Metadata | Title | MPath
 
-class AnimateMotion extends Base<'animateMotion'> {
-  constructor() {
-    super('animateMotion')
-  }
-
-  public setAttributes(attrs: AnimateMotionAttributes) {
-    super.setAttributes(attrs)
+class AnimateMotion extends Base<'animateMotion', AnimateMotionAttributes> {
+  constructor(attrs: AnimateMotionAttributes) {
+    super('animateMotion', attrs)
   }
 
   public append(child: ChildElement) {

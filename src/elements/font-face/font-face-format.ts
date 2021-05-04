@@ -5,13 +5,9 @@ type FontFaceFormatAttributes = CoreAttributes & {
   string?: string
 }
 
-class FontFaceFormat extends Base<'fontFaceFormat'> {
-  constructor() {
-    super('fontFaceFormat')
-  }
-
-  public setAttributes(attrs: FontFaceFormatAttributes) {
-    super.setAttributes(attrs)
+class FontFaceFormat extends Base<'fontFaceFormat', FontFaceFormatAttributes> {
+  constructor(attrs: FontFaceFormatAttributes) {
+    super('fontFaceFormat', attrs)
   }
 }
 

@@ -8,13 +8,9 @@ type FontFaceUriAttributes = CoreAttributes & XLinkAttributes
 
 type ChildElement = FontFaceFormat
 
-class FontFaceUri extends Base<'fontFaceUri'> {
-  constructor() {
-    super('fontFaceUri')
-  }
-
-  public setAttributes(attrs: FontFaceUriAttributes) {
-    super.setAttributes(attrs)
+class FontFaceUri extends Base<'fontFaceUri', FontFaceUriAttributes> {
+  constructor(attrs: FontFaceUriAttributes) {
+    super('fontFaceUri', attrs)
   }
 
   public append(child: ChildElement) {

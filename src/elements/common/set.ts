@@ -26,13 +26,9 @@ type SVGSetAttributes = ConditionalProcessingAttributes &
 
 type ChildElement = Desc | Metadata | Title
 
-class SVGSet extends Base<'set'> {
-  constructor() {
-    super('set')
-  }
-
-  public setAttributes(attrs: SVGSetAttributes) {
-    super.setAttributes(attrs)
+class SVGSet extends Base<'set', SVGSetAttributes> {
+  constructor(attrs: SVGSetAttributes) {
+    super('set', attrs)
   }
 
   public append(child: ChildElement) {

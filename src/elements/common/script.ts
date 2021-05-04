@@ -12,13 +12,9 @@ type ScriptAttributes = CoreAttributes &
     type?: string
   }
 
-class Script extends Base<'script'> {
-  constructor() {
-    super('script')
-  }
-
-  public setAttributes(attrs: ScriptAttributes) {
-    super.setAttributes(attrs)
+class Script extends Base<'script', ScriptAttributes> {
+  constructor(attrs: ScriptAttributes) {
+    super('script', attrs)
   }
 }
 
