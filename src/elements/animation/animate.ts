@@ -29,6 +29,8 @@ type AnimateAttributes = ConditionalProcessingAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class Animate extends Base<'animate', AnimateAttributes> {
+  public tagName = 'animate' as const
+
   constructor(attrs?: AnimateAttributes) {
     super('animate', attrs)
   }

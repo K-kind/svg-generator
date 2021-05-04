@@ -20,6 +20,8 @@ type MPathAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class MPath extends Base<'mpath', MPathAttributes> {
+  public tagName = 'mpath' as const
+
   constructor(attrs?: MPathAttributes) {
     super('mpath', attrs)
   }

@@ -76,6 +76,8 @@ type ChildElement =
   | Switch
 
 class Switch extends Base<'switch', SwitchAttributes> {
+  public tagName = 'switch' as const
+
   constructor(attrs?: SwitchAttributes) {
     super('switch', attrs)
   }

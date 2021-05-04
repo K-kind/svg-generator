@@ -28,6 +28,8 @@ type FontAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title | FontFace
 
 class Font extends Base<'font', FontAttributes> {
+  public tagName = 'font' as const
+
   constructor(attrs?: FontAttributes) {
     super('font', attrs)
   }

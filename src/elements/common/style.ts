@@ -8,6 +8,8 @@ type SVGStyleAttributes = CoreAttributes & {
 }
 
 class SVGStyle extends Base<'style', SVGStyleAttributes> {
+  public tagName = 'style' as const
+
   constructor(attrs?: SVGStyleAttributes) {
     super('style', attrs)
   }

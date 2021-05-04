@@ -31,6 +31,8 @@ type AnimateMotionAttributes = ConditionalProcessingAttributes &
 type ChildElement = Desc | Metadata | Title | MPath
 
 class AnimateMotion extends Base<'animateMotion', AnimateMotionAttributes> {
+  public tagName = 'animateMotion' as const
+
   constructor(attrs?: AnimateMotionAttributes) {
     super('animateMotion', attrs)
   }

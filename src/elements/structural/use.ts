@@ -75,6 +75,8 @@ type ChildElement =
   | View
 
 class Use extends Base<'use', UseAttributes> {
+  public tagName = 'use' as const
+
   constructor(attrs?: UseAttributes) {
     super('use', attrs)
   }

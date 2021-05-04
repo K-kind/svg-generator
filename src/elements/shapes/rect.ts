@@ -51,7 +51,8 @@ type ChildElement =
   | SVGSet
 
 class Rect extends Base<'rect', RectAttributes> {
-  protected name = 'rect'
+  public tagName = 'rect' as const
+
   constructor(attrs?: RectAttributes) {
     super('rect', attrs)
   }

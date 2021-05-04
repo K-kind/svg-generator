@@ -43,6 +43,8 @@ type ChildElement =
   | SVGSet
 
 class Circle extends Base<'circle', CircleAttributes> {
+  public tagName = 'circle' as const
+
   constructor(attrs?: CircleAttributes) {
     super('circle', attrs)
   }

@@ -26,6 +26,8 @@ type AltGlyphAttributes = CoreAttributes &
     rotate?: string
   }
 class AltGlyph extends Base<'altGlyph', AltGlyphAttributes> {
+  public tagName = 'altGlyph' as const
+
   constructor(attrs?: AltGlyphAttributes) {
     super('altGlyph', attrs)
   }

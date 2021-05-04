@@ -41,6 +41,8 @@ type ChildElement =
   | SVGSet
 
 class Polyline extends Base<'polyline', PolylineAttributes> {
+  public tagName = 'polyline' as const
+
   constructor(attrs?: PolylineAttributes) {
     super('polyline', attrs)
   }

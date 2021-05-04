@@ -34,6 +34,8 @@ class AnimateTransform extends Base<
   'animateTransform',
   AnimateTransformAttributes
 > {
+  public tagName = 'animateTransform' as const
+
   constructor(attrs?: AnimateTransformAttributes) {
     super('animateTransform', attrs)
   }

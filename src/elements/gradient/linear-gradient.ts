@@ -41,6 +41,8 @@ type ChildElement =
   | Stop
 
 class LinearGradient extends Base<'linearGradient', LinearGradientAttributes> {
+  public tagName = 'linearGradient' as const
+
   constructor(attrs?: LinearGradientAttributes) {
     super('linearGradient', attrs)
   }

@@ -20,6 +20,8 @@ type ViewAttributes = CoreAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class View extends Base<'view', ViewAttributes> {
+  public tagName = 'view' as const
+
   constructor(attrs?: ViewAttributes) {
     super('view', attrs)
   }

@@ -47,6 +47,8 @@ type ChildElement =
   | SVGSet
 
 class SVGImage extends Base<'image', SVGImageAttributes> {
+  public tagName = 'image' as const
+
   constructor(attrs?: SVGImageAttributes) {
     super('image', attrs)
   }

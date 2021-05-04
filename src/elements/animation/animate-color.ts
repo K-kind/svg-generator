@@ -29,6 +29,8 @@ type AnimateColorAttributes = ConditionalProcessingAttributes &
 type ChildElement = Desc | Metadata | Title
 
 class AnimateColor extends Base<'animateColor', AnimateColorAttributes> {
+  public tagName = 'animateColor' as const
+
   constructor(attrs?: AnimateColorAttributes) {
     super('animateColor', attrs)
   }

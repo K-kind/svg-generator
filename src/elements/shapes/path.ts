@@ -41,6 +41,8 @@ type ChildElement =
   | AnimateTransform
   | SVGSet
 class Path extends Base<'path', PathAttributes> {
+  public tagName = 'path' as const
+
   constructor(attrs?: PathAttributes) {
     super('path', attrs)
   }

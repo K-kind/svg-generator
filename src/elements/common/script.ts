@@ -13,6 +13,8 @@ type ScriptAttributes = CoreAttributes &
   }
 
 class Script extends Base<'script', ScriptAttributes> {
+  public tagName = 'script' as const
+
   constructor(attrs?: ScriptAttributes) {
     super('script', attrs)
   }

@@ -98,6 +98,8 @@ type ChildElement =
   | View
 
 class Defs extends Base<'defs', DefsAttributes> {
+  public tagName = 'defs' as const
+
   constructor(attrs?: DefsAttributes) {
     super('defs', attrs)
   }

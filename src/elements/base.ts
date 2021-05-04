@@ -22,6 +22,7 @@ type Attrs = { [key: string]: string | undefined }
 abstract class Base<K extends SVGElementTagName, A extends Attrs> {
   public static SVGXMLNS = 'http://www.w3.org/2000/svg'
   public element: AllSVGElementTagNameMap[K]
+  abstract tagName: K
 
   constructor(name: K, attrs?: A) {
     this.element = this.createElement(name)

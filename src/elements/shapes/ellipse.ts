@@ -44,6 +44,8 @@ type ChildElement =
   | SVGSet
 
 class Ellipse extends Base<'ellipse', EllipseAttributes> {
+  public tagName = 'ellipse' as const
+
   constructor(attrs?: EllipseAttributes) {
     super('ellipse', attrs)
   }

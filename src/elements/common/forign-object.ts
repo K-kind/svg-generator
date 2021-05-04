@@ -23,6 +23,8 @@ type ForeignObjectAttributes = CoreAttributes &
     height?: string
   }
 class ForeignObject extends Base<'foreignObject', ForeignObjectAttributes> {
+  public tagName = 'foreignObject' as const
+
   constructor(attrs?: ForeignObjectAttributes) {
     super('foreignObject', attrs)
   }

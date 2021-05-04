@@ -106,6 +106,8 @@ type ChildElement =
   | View
 
 class Pattern extends Base<'pattern', PatternAttributes> {
+  public tagName = 'pattern' as const
+
   constructor(attrs?: PatternAttributes) {
     super('pattern', attrs)
   }

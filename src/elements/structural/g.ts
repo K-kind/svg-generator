@@ -98,6 +98,8 @@ type ChildElement =
   | View
 
 class G extends Base<'g', GAttributes> {
+  public tagName = 'g' as const
+
   constructor(attrs?: GAttributes) {
     super('g', attrs)
   }

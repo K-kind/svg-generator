@@ -102,6 +102,8 @@ type ChildElement =
   | View
 
 class A extends Base<'a', AAttributes> {
+  public tagName = 'a' as const
+
   constructor(attrs?: AAttributes) {
     super('a', attrs)
   }

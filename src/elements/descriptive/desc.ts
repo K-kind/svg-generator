@@ -10,6 +10,8 @@ type DescAttributes = CoreAttributes &
   ExternalResourceAttributes
 
 class Desc extends Base<'desc', DescAttributes> {
+  public tagName = 'desc' as const
+
   constructor(attrs?: DescAttributes) {
     super('desc', attrs)
   }

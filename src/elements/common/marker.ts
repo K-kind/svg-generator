@@ -101,6 +101,8 @@ type ChildElement =
   | View
 
 class Marker extends Base<'marker', MarkerAttributes> {
+  public tagName = 'marker' as const
+
   constructor(attrs?: MarkerAttributes) {
     super('marker', attrs)
   }

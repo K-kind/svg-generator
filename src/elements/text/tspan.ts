@@ -50,6 +50,8 @@ type ChildElement =
   | Tspan
 
 class Tspan extends Base<'tspan', TspanAttributes> {
+  public tagName = 'tspan' as const
+
   constructor(attrs?: TspanAttributes) {
     super('tspan', attrs)
   }

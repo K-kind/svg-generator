@@ -9,6 +9,8 @@ type FontFaceUriAttributes = CoreAttributes & XLinkAttributes
 type ChildElement = FontFaceFormat
 
 class FontFaceUri extends Base<'fontFaceUri', FontFaceUriAttributes> {
+  public tagName = 'fontFaceUri' as const
+
   constructor(attrs?: FontFaceUriAttributes) {
     super('fontFaceUri', attrs)
   }

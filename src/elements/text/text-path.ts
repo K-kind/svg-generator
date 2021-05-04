@@ -47,6 +47,8 @@ type ChildElement =
   | Tspan
 
 class TextPath extends Base<'textPath', TextPathAttributes> {
+  public tagName = 'textPath' as const
+
   constructor(attrs?: TextPathAttributes) {
     super('textPath', attrs)
   }

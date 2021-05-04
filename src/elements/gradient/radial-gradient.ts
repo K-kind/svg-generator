@@ -42,6 +42,8 @@ type ChildElement =
   | Stop
 
 class RadialGradient extends Base<'radialGradient', RadialGradientAttributes> {
+  public tagName = 'radialGradient' as const
+
   constructor(attrs?: RadialGradientAttributes) {
     super('radialGradient', attrs)
   }

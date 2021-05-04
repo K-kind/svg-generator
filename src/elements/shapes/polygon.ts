@@ -41,6 +41,8 @@ type ChildElement =
   | SVGSet
 
 class Polygon extends Base<'polygon', PolygonAttributes> {
+  public tagName = 'polygon' as const
+
   constructor(attrs?: PolygonAttributes) {
     super('polygon', attrs)
   }

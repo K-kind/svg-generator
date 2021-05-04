@@ -59,6 +59,8 @@ type ChildElement =
   | Tspan
 
 class SVGText extends Base<'text', SVGTextAttributes> {
+  public tagName = 'text' as const
+
   constructor(attrs?: SVGTextAttributes) {
     super('text', attrs)
   }

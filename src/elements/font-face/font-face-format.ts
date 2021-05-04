@@ -6,6 +6,8 @@ type FontFaceFormatAttributes = CoreAttributes & {
 }
 
 class FontFaceFormat extends Base<'fontFaceFormat', FontFaceFormatAttributes> {
+  public tagName = 'fontFaceFormat' as const
+
   constructor(attrs?: FontFaceFormatAttributes) {
     super('fontFaceFormat', attrs)
   }

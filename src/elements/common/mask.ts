@@ -101,6 +101,8 @@ type ChildElement =
   | View
 
 class Mask extends Base<'mask', MaskAttributes> {
+  public tagName = 'mask' as const
+
   constructor(attrs?: MaskAttributes) {
     super('mask', attrs)
   }

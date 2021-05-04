@@ -10,6 +10,8 @@ type TitleAttributes = CoreAttributes &
   ExternalResourceAttributes
 
 class Title extends Base<'title', TitleAttributes> {
+  public tagName = 'title' as const
+
   constructor(attrs?: TitleAttributes) {
     super('title', attrs)
   }
